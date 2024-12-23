@@ -6,7 +6,7 @@ subtitle: MSc Student @ <a href='https://www.polytechnique.edu/en/school'>Ecole 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: adrien_prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: false
 

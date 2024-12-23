@@ -3,9 +3,9 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+first_name: Adrien
+middle_name:
+last_name: Goldszal
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -202,6 +202,11 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _pages/publications.md
+  - _pages/teaching.md
+  - _pages/dropdown.md
+  - _pages/blog.md
+  - _pages/profiles.md
 keep_files:
   - CNAME
   - .nojekyll

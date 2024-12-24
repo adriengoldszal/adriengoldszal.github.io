@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
-img: assets/img/6.jpg
-importance: 4
-category: fun
+title: Automatic Puzzle Solver
+description: Project for Ecole Polytechnique Image Analysis and CV Course
+img: assets/img/7.jpg
+redirect: https://unsplash.com
+importance: 3
+category: CS & ML
 ---
 
 Every project has a beautiful feature showcase page.

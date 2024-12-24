@@ -13,6 +13,7 @@ profile:
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+latest_posts: false
 ---
 
 Hi ! I'm a MSc Student (Cycle Ingénieur) at Ecole Polytechnique, France, studying mathematics and computer science, specializing in Data Science and Artificial Intelligence. 

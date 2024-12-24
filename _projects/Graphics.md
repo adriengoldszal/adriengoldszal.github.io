@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: 3D Animated Scene
+description: Project for Ecole Polytechnique Computer Graphics Course
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: CS & ML
 giscus_comments: true
 ---
 

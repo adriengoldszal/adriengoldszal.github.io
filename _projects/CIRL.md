@@ -1,10 +1,12 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: Cooperative Inverse Reinforcement Learning
+description: Ecole Polytechnique Collaborative and Reliable Learning Course
+img: assets/img/12.jpg
+importance: 1
+category: CS & ML
+related_publications: false
+repository: adriengoldszal/cooperative-inverse-reinforcement-learning
 ---
 
 Every project has a beautiful feature showcase page.
@@ -43,8 +45,8 @@ To give your project a background in the portfolio page, just add the img tag to
     This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
+You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
+Say you wanted to write a bit about your project before you posted the rest of the images.
 You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
 <div class="row justify-content-sm-center">
@@ -76,5 +78,11 @@ Here's the code for the last row of images above:
   </div>
 </div>
 ```
-
 {% endraw %}
+
+{% if page.repository %}
+<div class="repository-card">
+  <h2>Associated Repository</h2>
+  {% include repository/repo.liquid repository=page.repository %}
+</div>
+{% endif %}

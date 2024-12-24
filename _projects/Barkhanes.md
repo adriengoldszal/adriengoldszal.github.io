@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Study of barkhan dune movement
+description: Preparatory Classes Engineering Project
+img: assets/img/1.jpg
 importance: 3
-category: fun
+category: Engineering
 ---
 
 Every project has a beautiful feature showcase page.

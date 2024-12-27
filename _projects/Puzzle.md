@@ -4,7 +4,7 @@ title: Automatic Puzzle Solver
 description: Project for Ecole Polytechnique Image Analysis and CV Course
 img: assets/img/7.jpg
 redirect: https://unsplash.com
-importance: 3
+importance: 2
 category: CS & ML
 ---
 

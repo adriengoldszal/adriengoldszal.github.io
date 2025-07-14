@@ -4,7 +4,7 @@ title: Cooperative Inverse Reinforcement Learning
 description: Ecole Polytechnique Collaborative and Reliable Learning Course
 img: assets/img/12.jpg
 importance: 1
-category: CS & ML
+category: Reinforcement Learning
 related_publications: false
 repository: adriengoldszal/cooperative-inverse-reinforcement-learning
 ---

@@ -13,7 +13,15 @@ The use of atmospheric balloons is particularly well-suited for studying these p
 
 Our project follows the continuity of the STRATEOLE-2 and STRATELEC programs, in partnership with the Atmosphères, Observations Spatiales (LATMOS) laboratory, and aims to test and develop a prototype of a gondola, as well as its instrumentation, for use in certain CNES missions.
 
-A detailed report can be found [here](../../assets/pdf/Rapport_final_PSC.pdf)
+---
+
+<div class="row justify-content-center mb-4">
+    <div class="col-auto">
+        <a href="{{ '/assets/pdf/Rapport_final_PSC.pdf' | relative_url }}" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="fas fa-file-pdf"></i> Read Report (PDF)
+        </a>
+    </div>
+</div>
 
 ## Measurements 
 

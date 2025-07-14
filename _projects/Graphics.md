@@ -4,7 +4,7 @@ title: 3D Animated Scene
 description: Project for Ecole Polytechnique Computer Graphics Course
 img: assets/img/INF443_Scene_Image.png
 importance: 3
-category: CS & ML
+category: Graphics & Computer Vision
 giscus_comments: false
 repository: adriengoldszal/3D-Animated-Scene
 ---
@@ -23,7 +23,17 @@ repository: adriengoldszal/3D-Animated-Scene
 
 This project, part of Ecole Polytechnique's Computer Graphics class, leverages C++ and the OpenGL API to render a 3D animated scene. It takes advantage of the [CGP Library](https://graphicscomputing.fr/cgp/documentation/01_general/index.html) for most of the low level implementation. 
 
-Together with [Emilie Liaud](https://www.linkedin.com/in/emilie-liaud-425058212/?originalSubdomain=fr), we created an interactive 3D Scene depicting the Ha-Long Bay in Vietnam, where the user can control a boat across the landscape. A few key elements are described in the following paragraphs, the full code can be found [here](https://github.com/adriengoldszal/3D-Animated-Scene)
+Together with [Emilie Liaud](https://www.linkedin.com/in/emilie-liaud-425058212/?originalSubdomain=fr), we created an interactive 3D Scene depicting the Ha-Long Bay in Vietnam, where the user can control a boat across the landscape. A few key elements are described in the following paragraphs.
+
+---
+
+<div class="row justify-content-center mb-4">
+    <div class="col-auto">
+        <a href="https://github.com/adriengoldszal/3D-Animated-Scene" class="btn btn-primary btn-sm" target="_blank">
+            <i class="fab fa-github"></i> View Repository
+        </a>
+    </div>
+</div>
 
 ## I - Elements of the scene
 

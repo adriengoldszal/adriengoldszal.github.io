@@ -2,80 +2,40 @@
 layout: page
 title: Automatic Puzzle Solver
 description: Project for Ecole Polytechnique Image Analysis and CV Course
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+img: assets/img/puzzle/bon_match_scaling.jpg
 importance: 2
 category: Graphics & Computer Vision
+repository: adriengoldszal/INF573_Puzzle
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The challenge of puzzle solving is a subject that has occupied the scientific community working on computer vision for decades. Indeed, this 'problem', and the methods used to solve it, are often presented as the first step of a possible extension towards more serious subjects, such as the reconstruction of archaeological artifacts for example. It is a more playful approach that is at the origin of this project. Seeing the possibility of using computer vision to help with puzzle solving, this project proposes to develop an 'automatic' puzzle solving method, in real-time, observing the pieces with the user and indicating where to place them.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project therefore implements numerous image analysis tools and seeks a certain form of robustness necessary due to its real-time operation. Our method proposes to function iteratively in real-time, allowing us to accompany the user in solving the puzzle. This approach, combined with better feature detection, allows for more robust puzzle resolution with a larger number of pieces, surpassing all benchmarks. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center mb-4">
+    <div class="col-auto">
+        <a href="https://github.com/adriengoldszal/INF573_Puzzle" class="btn btn-primary btn-sm me-2" target="_blank">
+            <i class="fab fa-github"></i> View Repository
+        </a>
+        <a href="{{ '/assets/pdf/CSC_51073_EP_Puzzle.pdf' | relative_url }}" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="fas fa-file-pdf"></i> Read Paper (PDF)
+        </a>
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The overall puzzle solver pipeline is as follows:
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+1. A phone, attached to a stand, allows real-time observation of a certain number of pieces (about 10 to 15) on a white background. This phone is connected to the computer through an application to retrieve the camera feed. Additionally, the global image of the puzzle (on the box) is given as input.
+
+2. An image is taken by the camera at a given regular interval and processed by the algorithm.
+
+3. On the computer screen, an interface displays the phone's video, as well as the puzzle under construction, indicating each time which piece to move and its location on the final puzzle.
+
+All implementation details: morphological operations, feature detection and matching, homographies, verification after piece selection, are in the attached paper.
+
+{% if page.repository %}
+<div class="repository-card">
+  <h2>Associated Repository</h2>
+  {% include repository/repo.liquid repository=page.repository %}
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+{% endif %}

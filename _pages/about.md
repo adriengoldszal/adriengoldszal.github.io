@@ -16,8 +16,8 @@ social: true # includes social icons at the bottom of the page
 latest_posts: false
 ---
 
-Hi ! I'm a MSc Student (Cycle Ingénieur) at Ecole Polytechnique, France, studying mathematics and computer science, specializing in Data Science and Artificial Intelligence. 
+Hi ! I'm a final year MSc student at [Paris Sciences et Lettres (PSL)](https://www.masteriasd.eu/en/) specializing in machine learning, after having finished an engineering degree (Cycle Ingénieur) at Ecole Polytechnique, France, studying mathematics and computer science. 
 
 Previously, I studied engineering as well as physics and chemistry in my preparatory classes at the Lycée Sainte Geneviève in Versailles for my undergraduate studies. 
 
-I'm passionate about leveraging machine learning for scientific and engineering applications, from robotics to drug discovery. I notably had the chance to work at Siemens under Dr. Peter Robl on automating electric cable routing in 3D CAD with RL.
+I'm passionate about leveraging machine learning for scientific and engineering applications, from robotics to drug discovery. I notably had the chance to work at Siemens in Munich under Dr. Peter Robl on automating electric cable routing in 3D CAD with RL and more recently on novel approaches for molecular discovery under Prof. [Pierre-Luc Bacon](https://pierrelucbacon.com/).

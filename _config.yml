@@ -201,7 +201,6 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - _pages/publications.md
   - _pages/teaching.md
   - _pages/dropdown.md
   - _pages/blog.md

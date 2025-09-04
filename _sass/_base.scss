@@ -207,6 +207,11 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// About page text justification
+.post article .clearfix {
+  text-align: justify;
+}
+
 .profile.float-right {
   margin-left: 1rem;
 }

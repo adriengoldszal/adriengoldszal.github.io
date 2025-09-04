@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Projects done during my studies over the years
 nav: true
 nav_order: 3
-display_categories: [Graphics & Computer Vision,Reinforcement Learning, Engineering]
+display_categories: [Reinforcement Learning, Graphics & Computer Vision, Engineering]
 horizontal: false
 ---
 

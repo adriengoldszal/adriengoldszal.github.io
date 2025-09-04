@@ -10,8 +10,9 @@ manage_gemfile_lock() {
     git config --global --add safe.directory '*'
     if command -v git &> /dev/null && [ -f Gemfile.lock ]; then
         if git ls-files --error-unmatch Gemfile.lock &> /dev/null; then
-            echo "Gemfile.lock is tracked by git, keeping it intact"
-            git restore Gemfile.lock 2>/dev/null || true
+            echo "Gemfile.lock is tracked by git, but regenerating for Docker platform compatibility"
+            rm -f Gemfile.lock
+            bundle install
         else
             echo "Gemfile.lock is not tracked by git, removing it"
             rm Gemfile.lock

@@ -1,6 +1,8 @@
 ---
 ---
 <div class="row">
+  {% assign presentations = site.data.publication_presentations[entry.key] %}
+  {% assign primary_presentation = presentations | first %}
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -16,7 +18,7 @@
             {% endif -%}
           >
             {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+              <a href="{{ site.data.venues[entry.abbr].url }}">{{ site.data.venues[entry.abbr].label | default: entry.abbr }}</a>
             {% else %}
               <div>{{- entry.abbr -}}</div>
             {% endif %}
@@ -24,6 +26,9 @@
         {% else %}
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
+      {% endif %}
+      {% if primary_presentation.format %}
+        <span class="presentation-badge">{{ primary_presentation.format }}</span>
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
@@ -151,7 +156,7 @@
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% capture entrytype %}<em>{% if site.data.venues[entry.abbr].url %}<a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.booktitle }}</a>{% else %}In {{ entry.booktitle }}{% endif %}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
@@ -175,7 +180,21 @@
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
+    {% if presentations %}
+      <div class="publication-presentations">
+        {% for presentation in presentations %}
+          <div class="publication-presentation">
+            <a href="{{ presentation.url }}">{{ presentation.venue }}</a>, {{ presentation.year }}
+            {% unless site.enable_publication_thumbnails %}
+              {% if presentation.format %}
+                <span class="presentation-badge">{{ presentation.format }}</span>
+              {% endif %}
+            {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="periodical{% if presentations %} publication-preprint{% endif %}">
       {{ periodical | strip }}
     </div>
     <div class="periodical">

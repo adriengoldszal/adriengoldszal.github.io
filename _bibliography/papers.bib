@@ -3,8 +3,33 @@
 
 
 
+@inproceedings{TransDim,
+  abbr={NeurIPS Workshop},
+  title={Steering Flexible-Size Molecular Generation via RL on Trans-Dimensional Flows},
+  author={Goldszal, Adrien and Franke, Malte and Krause, Andreas},
+  booktitle={AI for Accelerated Materials Design (AI4Mat) Workshop at NeurIPS},
+  year={2026},
+  abstract={Flexible-size molecular generators can change cardinality during sampling through
+            insertion and deletion, but steering such trans-dimensional processes with reinforcement
+            learning requires accounting for actions whose dimension changes along the trajectory.
+            We formulate flexible-size generation as a parameterized-action Markov decision process,
+            in which discrete structural decisions select the relevant action-space component and
+            continuous and discrete content is sampled conditionally within it. We derive the
+            corresponding per-step policy density and use it for policy-gradient fine-tuning of
+            Morph, a trans-dimensional 3D molecular generator. Across three settings, reward
+            optimization steers both molecular properties and the model's structural decisions.
+            On QM9, the model generates molecules far beyond the pretraining size support, reaching
+            a mean of 69.9 atoms. On GEOM-Drugs, a sparse validity reward improves strict validity
+            from 92.9% to 98.0%, while PoseBusters validity and strain also improve. For
+            pocket-conditioned ligand generation, fine-tuning improves binding efficiency while
+            ligand size changes in both directions across targets.},
+  note={Accepted. Work conducted at ETH Zurich as part of my master's thesis.},
+  pdf={Transdim_Ai4Mat_final.pdf},
+  selected={true},
+}
+
 @article{RefGen,
-  abbr={RefGen},
+  abbr={AI4X},
   title={Discovery of Sustainable Refrigerants through Physics-Informed RL Fine-Tuning of Sequence Models},
   author={Goldszal, A. and Calanzone, D. and Taboga, V. and Bacon, P.-L.},
   abstract={Most refrigerants currently used in air-conditioning systems, such as hydrofluo-
@@ -25,7 +50,7 @@
   journal={Preprint},
   year={2025},
   month={August},
-  pdf={Refgen_Preprint.pdf},
+  pdf={Eurips_Refgen_Camera_ready.pdf},
   arxiv={2509.19588},
   selected={true},
 }

@@ -7,3 +7,12 @@
 
 "Vision":
   color: "#009f36"
+
+"AI4X":
+  url: https://kazeevn.github.io/AI4X-Accelerate-2026/
+  color: "#167a91"
+
+"NeurIPS Workshop":
+  label: "NeurIPS<br>Workshop"
+  url: https://sites.google.com/view/ai4mat/home
+  color: "#167a91"

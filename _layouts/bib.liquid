@@ -184,7 +184,8 @@
       <div class="publication-presentations">
         {% for presentation in presentations %}
           <div class="publication-presentation">
-            <a href="{{ presentation.url }}">{{ presentation.venue }}</a>, {{ presentation.year }}
+            {% if proceedings contains entry.type %}<em>{% endif %}<a href="{{ presentation.url }}">{{ presentation.venue }}</a>{% if proceedings contains entry.type %}</em>{% endif %}, {{ presentation.year }}
+            {% if presentation.note %}<span>({{ presentation.note }})</span>{% endif %}
             {% unless site.enable_publication_thumbnails %}
               {% if presentation.format %}
                 <span class="presentation-badge">{{ presentation.format }}</span>
@@ -194,9 +195,11 @@
         {% endfor %}
       </div>
     {% endif %}
-    <div class="periodical{% if presentations %} publication-preprint{% endif %}">
-      {{ periodical | strip }}
-    </div>
+    {% unless presentations and proceedings contains entry.type %}
+      <div class="periodical{% if presentations %} publication-preprint{% endif %}">
+        {{ periodical | strip }}
+      </div>
+    {% endunless %}
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
@@ -213,6 +216,9 @@
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {% endif %}
+      {% if entry.openreview %}
+        <a href="{{ entry.openreview }}" class="btn btn-sm z-depth-0" role="button">OpenReview</a>
       {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>

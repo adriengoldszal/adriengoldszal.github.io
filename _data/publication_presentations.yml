@@ -1,3 +1,12 @@
+TransDim:
+  - venue: AI for Accelerated Materials Design (AI4Mat) Workshop at NeurIPS
+    year: 2026
+    url: https://sites.google.com/view/ai4mat/home
+  - venue: ML4Molecules Workshop at NeurIPS
+    year: 2026
+    url: https://moleculediscovery.github.io/workshop2026/
+    note: Accepted for poster presentation
+
 RefGen:
   - venue: AI4X - Accelerate Conference
     year: 2026

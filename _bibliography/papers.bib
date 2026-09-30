@@ -3,6 +3,32 @@
 
 
 
+@inproceedings{DEAM,
+  abbr={PriGM},
+  title={Discrete Edit Adjoint Matching for Reward Fine-Tuning Variable-Length Discrete Generators},
+  author={Goldszal, Adrien},
+  booktitle={Principles of Generative Modeling (PriGM) Workshop at NeurIPS},
+  year={2026},
+  abstract={Reward fine-tuning of variable-length discrete generators requires controlling
+            insertion, deletion, and substitution rates while preserving the underlying
+            continuous-time dynamics. We introduce Discrete Edit Adjoint Matching (DEAM),
+            which extends adjoint matching to edit CTMCs, chains on sequences of any length
+            whose transitions are single edits, using the full path-space likelihood ratio
+            and a learned scalar potential whose differences define log-rate corrections.
+            We amortize it into a direct edit head, avoiding a potential evaluation at every
+            one-edit successor during sampling. On an enumerable Edit Flow with exact values
+            and adjoints, DEAM approaches the discretized exact-adjoint reference without
+            oracle access and substantially outperforms non-oracle rate-matching and
+            trajectory-credit baselines. The same controller transfers to small-molecule
+            design: on a pretrained 96M-parameter any-length insertion diffusion over SAFE
+            strings, DEAM matches A2D2's reward at better synthetic accessibility, validity
+            and diversity.},
+  note={Accepted for poster presentation.},
+  pdf={PriGM_final.pdf},
+  openreview={https://openreview.net/forum?id=25k5afCdyy},
+  selected={true},
+}
+
 @inproceedings{TransDim,
   abbr={NeurIPS Workshop},
   title={Steering Flexible-Size Molecular Generation via RL on Trans-Dimensional Flows},
@@ -25,6 +51,7 @@
             ligand size changes in both directions across targets.},
   note={Accepted. Work conducted at ETH Zurich as part of my master's thesis.},
   pdf={Transdim_Ai4Mat_final.pdf},
+  openreview={https://openreview.net/forum?id=Ro91GPMCF4},
   selected={true},
 }
 
